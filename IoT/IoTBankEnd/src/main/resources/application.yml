@@ -1,0 +1,14 @@
+server:
+  port: 7078
+  max-http-header-size : 10KB
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.199.66.15:3306/iot?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: GuoYaoYU1.
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+
