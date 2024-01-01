@@ -25,5 +25,10 @@ public class DataImpl implements DataService {
         return dataMapper.getByDate(date, nextDate);
     }
 
+    @Override
+    public List<Data> getPredate(LocalDateTime startDate, LocalDateTime nextDate) {
+        return dataMapper.getPredate(startDate, nextDate);
+    }
+
 
 }

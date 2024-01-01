@@ -37,6 +37,14 @@ public class DataController {
         return Result.success(dataService.getByDate(startDate, nextDate));
 
     }
+    @GetMapping("/getPredate")
+    public Result getPredate(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+
+        LocalDateTime startDate = date.atStartOfDay().withHour(0).withMinute(0).withSecond(0);
+        LocalDateTime nextDate = startDate.plusDays(1).withSecond(0);
+        return Result.success(dataService.getPredate(startDate, nextDate));
+
+    }
 
 
 }

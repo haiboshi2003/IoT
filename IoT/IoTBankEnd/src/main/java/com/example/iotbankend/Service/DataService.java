@@ -12,4 +12,6 @@ public interface DataService {
 
 
     List<Data> getByDate(LocalDateTime date, LocalDateTime nextDate);
+
+    List<Data> getPredate(LocalDateTime startDate, LocalDateTime nextDate);
 }
